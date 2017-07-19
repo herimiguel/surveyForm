@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Result Page</title>
+    <!--{% load staticfiles %}-->
+
+  </head>
+  <body>
+
+        <h1>CONGRATULATIONS!</h1>
+        <p> Thanks for submitting this form! You have submitted this form {{ request.session.count }} times now.</p>
+      </div>
+        <h2>Submitted Information:</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Name:</td>
+              <td>{{ request.session.name }}</td>
+            </tr>
+            <tr>
+              <td>Dojo Location:</td>
+              <td>{{ request.session.dojoLocation }}</td>
+            </tr>
+            <tr>
+              <td>Favorite Language:</td>
+              <td>{{ request.session.language }}</td>
+            </tr>
+            <tr>
+              <td>Comment:</td>
+              <td>{{ request.session.comment }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <form class="" action="/">
+          <input type="submit" name="" value="Go Back">
+        </form>
+  </body>
+</html>
